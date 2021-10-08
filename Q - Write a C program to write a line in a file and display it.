@@ -1,0 +1,17 @@
+Q - Write a C program to write a line in a file and display it.
+
+
+#include <stdio.h> #include <stdlib.h>
+int main() {
+char sentence[1000];
+FILE *abcd;
+abcd = fopen("program.txt", "w");
+if (abcd == NULL) { printf("Error!"); exit(1);
+}
+printf("Enter a sentence:");
+fgets(sentence, 
+sizeof(sentence), stdin); 
+fprintf(abcd, "%s", sentence); 
+fclose(abcd);
+return 0;
+}
